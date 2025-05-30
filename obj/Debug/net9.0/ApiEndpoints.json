@@ -1,0 +1,80 @@
+[
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.AccountController",
+    "Method": "CreateAccount",
+    "RelativePath": "api/Account/createAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BlockchainExplorer.Models.Features.Account.CreateAccount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.AccountController",
+    "Method": "GetAccount",
+    "RelativePath": "api/Account/getAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.AccountController",
+    "Method": "UpdateAccount",
+    "RelativePath": "api/Account/updateAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BlockchainExplorer.Models.Features.Account.UpdateAccount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.ExplorerController",
+    "Method": "GetAssets",
+    "RelativePath": "api/Explorer/getAssets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.ExplorerController",
+    "Method": "GetBalances",
+    "RelativePath": "api/Explorer/getBalances",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BlockchainExplorer.Models.Common.BalanceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.ExplorerController",
+    "Method": "GetChains",
+    "RelativePath": "api/Explorer/getChains",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
