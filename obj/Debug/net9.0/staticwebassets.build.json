@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "okHY12s6Ze1OJpmrpHzkFoAA0/VJSNNETjZx2YyBLB0=",
+  "Source": "BlockchainExplorer",
+  "BasePath": "_content/BlockchainExplorer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

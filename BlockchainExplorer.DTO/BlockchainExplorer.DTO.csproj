@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Features\Asset\NFT\" />
+    <Folder Include="Models\Features\Asset\Token\" />
+    <Folder Include="Models\Features\Dex\" />
+    <Folder Include="Models\Features\Marketplace\" />
+  </ItemGroup>
+
+</Project>
