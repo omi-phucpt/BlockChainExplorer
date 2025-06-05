@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dhuijax\\Desktop\\BlockchainExplorer\\BlockchainExplorer.csproj": {}
+    "C:\\Users\\phucpt\\Documents\\GitHub\\BlockChainExplorer\\BlockchainExplorer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dhuijax\\Desktop\\BlockchainExplorer\\BlockchainExplorer.csproj": {
+    "C:\\Users\\phucpt\\Documents\\GitHub\\BlockChainExplorer\\BlockchainExplorer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dhuijax\\Desktop\\BlockchainExplorer\\BlockchainExplorer.csproj",
+        "projectUniqueName": "C:\\Users\\phucpt\\Documents\\GitHub\\BlockChainExplorer\\BlockchainExplorer.csproj",
         "projectName": "BlockchainExplorer",
-        "projectPath": "C:\\Users\\Dhuijax\\Desktop\\BlockchainExplorer\\BlockchainExplorer.csproj",
-        "packagesPath": "C:\\Users\\Dhuijax\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dhuijax\\Desktop\\BlockchainExplorer\\obj\\",
+        "projectPath": "C:\\Users\\phucpt\\Documents\\GitHub\\BlockChainExplorer\\BlockchainExplorer.csproj",
+        "packagesPath": "C:\\Users\\phucpt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phucpt\\Documents\\GitHub\\BlockChainExplorer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dhuijax\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phucpt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,8 +25,8 @@
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net9.0": {
@@ -42,9 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

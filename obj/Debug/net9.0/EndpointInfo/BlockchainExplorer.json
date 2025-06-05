@@ -5,7 +5,7 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Account/getAccount": {
+    "/api/Account/get-account": {
       "get": {
         "tags": [
           "Account"
@@ -17,7 +17,7 @@
         }
       }
     },
-    "/api/Account/createAccount": {
+    "/api/Account/create-account": {
       "post": {
         "tags": [
           "Account"
@@ -48,7 +48,7 @@
         }
       }
     },
-    "/api/Account/updateAccount": {
+    "/api/Account/update-account": {
       "post": {
         "tags": [
           "Account"
@@ -79,42 +79,135 @@
         }
       }
     },
-    "/api/Explorer/getChains": {
+    "/api/Asset/get-asset-address": {
+      "post": {
+        "tags": [
+          "Asset"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetAddress"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetAddress"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetAddress"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Asset/get-asset-account": {
+      "post": {
+        "tags": [
+          "Asset"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetAccountId"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetAccountId"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssetAccountId"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Balance/get-balance-address": {
+      "post": {
+        "tags": [
+          "Balance"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BalanceAddress"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BalanceAddress"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BalanceAddress"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Balance/get-balance-account": {
+      "post": {
+        "tags": [
+          "Balance"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BalanceAccountId"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BalanceAccountId"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BalanceAccountId"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Explorer/get-chains": {
       "get": {
         "tags": [
           "Explorer"
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Explorer/getBalances": {
-      "post": {
-        "tags": [
-          "Explorer"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/BalanceRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/BalanceRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/BalanceRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -151,10 +244,52 @@
         },
         "additionalProperties": false
       },
-      "BalanceRequest": {
+      "AssetAccountId": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string",
+            "nullable": true
+          },
+          "chains": {
+            "type": "string",
+            "nullable": true
+          },
+          "filter": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssetAddress": {
         "type": "object",
         "properties": {
           "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "chainId": {
+            "type": "string",
+            "nullable": true
+          },
+          "filter": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BalanceAccountId": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string",
+            "nullable": true
+          },
+          "chains": {
             "type": "string",
             "nullable": true
           },
@@ -162,7 +297,25 @@
             "type": "string",
             "nullable": true
           },
+          "excludeRiskToken": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BalanceAddress": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
           "chainId": {
+            "type": "string",
+            "nullable": true
+          },
+          "assetType": {
             "type": "string",
             "nullable": true
           },

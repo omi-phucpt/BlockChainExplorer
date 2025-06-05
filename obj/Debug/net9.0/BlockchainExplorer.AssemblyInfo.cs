@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlockchainExplorer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6509c4073fa9bff78cc120711218aee9b12201e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2318b4b2ec4e9ef00ce61ec358c58cfb09fb8af1")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlockchainExplorer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlockchainExplorer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

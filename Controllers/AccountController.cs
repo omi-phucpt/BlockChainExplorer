@@ -20,7 +20,7 @@ namespace BlockchainExplorer.Controllers
             _apiClient = apiClient;
         }
 
-        [HttpGet("getAccount")]
+        [HttpGet("get-account")]
         public async Task<IActionResult> GetAccount()
         {
             var accountIdUrl = _endpoints.Account.GetAccount;
@@ -32,7 +32,7 @@ namespace BlockchainExplorer.Controllers
             return Ok(response);
         }
 
-        [HttpPost("createAccount")]
+        [HttpPost("create-account")]
         public async Task<IActionResult> CreateAccount([FromBody] CreateAccount request)
         {
             var accountIdUrl = _endpoints.Account.CreateAccount;
@@ -44,7 +44,7 @@ namespace BlockchainExplorer.Controllers
             return Ok(response);
         }
 
-        [HttpPost("updateAccount")]
+        [HttpPost("update-account")]
         public async Task<IActionResult> UpdateAccount([FromBody] UpdateAccount request)
         {
             var accountIdUrl = _endpoints.Account.UpdateAccount;

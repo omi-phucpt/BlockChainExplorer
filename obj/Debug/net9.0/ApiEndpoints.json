@@ -2,7 +2,7 @@
   {
     "ContainingType": "BlockchainExplorer.Controllers.AccountController",
     "Method": "CreateAccount",
-    "RelativePath": "api/Account/createAccount",
+    "RelativePath": "api/Account/create-account",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +18,7 @@
   {
     "ContainingType": "BlockchainExplorer.Controllers.AccountController",
     "Method": "GetAccount",
-    "RelativePath": "api/Account/getAccount",
+    "RelativePath": "api/Account/get-account",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "BlockchainExplorer.Controllers.AccountController",
     "Method": "UpdateAccount",
-    "RelativePath": "api/Account/updateAccount",
+    "RelativePath": "api/Account/update-account",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -42,26 +42,64 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BlockchainExplorer.Controllers.ExplorerController",
-    "Method": "GetAssets",
-    "RelativePath": "api/Explorer/getAssets",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BlockchainExplorer.Controllers.ExplorerController",
+    "ContainingType": "BlockchainExplorer.Controllers.AssetController",
     "Method": "GetBalances",
-    "RelativePath": "api/Explorer/getBalances",
+    "RelativePath": "api/Asset/get-asset-account",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "BlockchainExplorer.Models.Common.BalanceRequest",
+        "Type": "BlockchainExplorer.BlockchainExplorer.DTO.Models.Features.Balance.AssetAccountId",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.AssetController",
+    "Method": "GetBalancesAddress",
+    "RelativePath": "api/Asset/get-asset-address",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BlockchainExplorer.BlockchainExplorer.DTO.Models.Features.Balance.AssetAddress",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.BalanceController",
+    "Method": "GetBalances",
+    "RelativePath": "api/Balance/get-balance-account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BlockchainExplorer.BlockchainExplorer.DTO.Models.Features.Balance.BalanceAccountId",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.BalanceController",
+    "Method": "GetBalancesAddress",
+    "RelativePath": "api/Balance/get-balance-address",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BlockchainExplorer.BlockchainExplorer.DTO.Models.Features.Balance.BalanceAddress",
         "IsRequired": true
       }
     ],
@@ -70,7 +108,17 @@
   {
     "ContainingType": "BlockchainExplorer.Controllers.ExplorerController",
     "Method": "GetChains",
-    "RelativePath": "api/Explorer/getChains",
+    "RelativePath": "api/Explorer/get-chains",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlockchainExplorer.Controllers.ExplorerController",
+    "Method": "GetAssets",
+    "RelativePath": "api/Explorer/getAssets",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -1,6 +1,6 @@
-﻿namespace BlockchainExplorer.Models.Common
+﻿namespace BlockchainExplorer.BlockchainExplorer.DTO.Models.Features.Balance
 {
-    public class BalanceResponse
+    public class AssetResponse
     {
         public decimal NativeBalance { get; set; }
         public string NativeSymbol { get; set; }
