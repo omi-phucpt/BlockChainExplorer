@@ -16,8 +16,10 @@ namespace BlockchainExplorer.Common
         public class BalanceEndpoints
         {
             public string SupportedChain { get; } = "https://web3.okx.com/api/v5/dex/balance/supported/chain";
-            public string TotalValue { get; } = "https://web3.okx.com/api/v5/wallet/asset/total-value";
-            public string AllTokenBalancesByAddress { get; } = "https://web3.okx.com/api/v5/dex/balance/all-token-balances-by-address";
+            public string Account { get; } = "https://web3.okx.com/api/v5/wallet/asset/total-value";
+            public string Address { get; } = "https://web3.okx.com/api/v5/wallet/asset/total-value-by-address";
+            public string AllTokenAccount { get; } = "https://web3.okx.com/api/wallet/asset/wallet-all-token-balances";
+            public string AllTokenAddress { get; } = "https://web3.okx.com/api/v5/wallet/asset/all-token-balances-by-address";
             public string TokenBalancesByAddress { get; } = "https://web3.okx.com/api/v5/dex/balance/token-balances-by-address";
         }
 

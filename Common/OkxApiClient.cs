@@ -60,32 +60,6 @@ namespace BlockchainExplorer.Common
                 using var document = JsonDocument.Parse(response);
                 var root = document.RootElement;
 
-                //if (root.ValueKind == JsonValueKind.Object)
-                //{
-                //    if (root.TryGetProperty("data", out var dataElement))
-                //    {
-                //        if (dataElement.ToString() == "[]")
-                //        {
-                //            return root.TryGetProperty("msg", out var msg) ? msg : throw new JsonException("Field 'data' not found.");
-                //        }
-                //        else
-                //        {
-                //            if (dataElement.ValueKind == JsonValueKind.Array)
-                //            {
-                //                return dataElement.Clone();
-                //            }
-                //            else
-                //            {
-                //                throw new JsonException("Field 'data' không phải mảng.");
-                //            }
-                //        }
-                //    }
-                //    throw new JsonException("Field 'data' không phải mảng.");
-                //}
-                //else
-                //{
-                //    throw new JsonException("The 'data' field is missing or not an object.");
-                //}
                 if (root.ValueKind != JsonValueKind.Object)
                     throw new JsonException("The 'data' field is missing or not an object.");
 
@@ -111,16 +85,14 @@ namespace BlockchainExplorer.Common
             {
                 if (!string.IsNullOrEmpty(param.Value))
                 {
-                    query.Add($"accountId={HttpUtility.UrlEncode(param.Value)}");
+                    query.Add($"{HttpUtility.UrlEncode(param.Key)}={HttpUtility.UrlEncode(param.Value)}");
                 }
             }
-            
-            if (queryParams["chains"] == "")
-            {
-                query.Add($"chains=1");
-            }
 
-            return string.Join("&", query);
+            if (string.IsNullOrEmpty(queryParams["chains"]))
+                    query.Add($"chains=1");
+
+                return string.Join("&", query);
         }
         private string GenerateSignature(string timestamp, string method, string requestPath, string body)
         {
